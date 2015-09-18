@@ -1,0 +1,19 @@
+{
+  "name": "angular-medium-editor",
+  "version": "0.1.1",
+  "dependencies": {
+    "angular": "1.3.*",
+    "medium-editor": "5.8.*"
+  },
+  "main": "./dist/angular-medium-editor.js",
+  "homepage": "https://github.com/oosidat/angular-medium-editor",
+  "_release": "0.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.1",
+    "commit": "72d356a65ea170684a744e4c00dac86967a61bc3"
+  },
+  "_source": "https://github.com/oosidat/angular-medium-editor.git",
+  "_target": "v0.1.1",
+  "_originalSource": "https://github.com/oosidat/angular-medium-editor.git"
+}
