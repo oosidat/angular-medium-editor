@@ -1,9 +1,9 @@
 {
   "name": "angular-medium-editor-demo",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "dependencies": {
     "angular": "1.3.*",
     "medium-editor": "5.8.*",
-    "angular-medium-editor": "https://github.com/oosidat/angular-medium-editor.git#v0.1.1"
+    "angular-medium-editor": "https://github.com/oosidat/angular-medium-editor.git#v0.1.2"
   }
 }

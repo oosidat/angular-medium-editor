@@ -1,19 +1,20 @@
 {
   "name": "angular-medium-editor",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "dependencies": {
     "angular": "1.3.*",
-    "medium-editor": "5.8.*"
+    "medium-editor": "5.8.*",
+    "medium-editor-insert-plugin": "https://github.com/oosidat/medium-editor-insert-plugin.git#v2.0.2"
   },
   "main": "./dist/angular-medium-editor.js",
   "homepage": "https://github.com/oosidat/angular-medium-editor",
-  "_release": "0.1.1",
+  "_release": "0.1.2",
   "_resolution": {
     "type": "version",
-    "tag": "v0.1.1",
-    "commit": "72d356a65ea170684a744e4c00dac86967a61bc3"
+    "tag": "v0.1.2",
+    "commit": "db8f4f93e8006a88d0ba22c4e236c8934e2971b1"
   },
   "_source": "https://github.com/oosidat/angular-medium-editor.git",
-  "_target": "v0.1.1",
+  "_target": "v0.1.2",
   "_originalSource": "https://github.com/oosidat/angular-medium-editor.git"
 }
