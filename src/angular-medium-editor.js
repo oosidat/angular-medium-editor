@@ -70,7 +70,7 @@ angular.module('angular-medium-editor', [])
             }
 
             this.editor = new MediumEditor(iElement, opts);
-            angular.element(iElement).mediumInsert(scope.$eval({editor: this.editor, enabled: true}));
+            jQuery(iElement).mediumInsert(scope.$eval({editor: this.editor, enabled: true}));
           }
 
           iElement.html(ctrl.$isEmpty(ctrl.$viewValue) ? '' : ctrl.$viewValue);
