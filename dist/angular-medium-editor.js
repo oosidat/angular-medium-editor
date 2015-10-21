@@ -1,3 +1,10 @@
+/**
+ * angular-medium-editor
+ * @version v0.1.0 - 2015-10-21
+ * @link https://github.com/thijsw/angular-medium-editor
+ * @author Thijs Wijnmaalen <thijs@wijnmaalen.name>
+ * @license MIT License, http://www.opensource.org/licenses/MIT
+ */
 'use strict';
 
 angular.module('angular-medium-editor', [])
@@ -7,7 +14,10 @@ angular.module('angular-medium-editor', [])
     return {
       require: 'ngModel',
       restrict: 'AE',
-      scope: { bindOptions: '=' },
+      scope: {
+        bindOptions: '=',
+        imageUploadAction: '&'
+      },
       link: function(scope, iElement, iAttrs, ctrl) {
 
         angular.element(iElement).addClass('angular-medium-editor');
@@ -70,7 +80,23 @@ angular.module('angular-medium-editor', [])
             }
 
             this.editor = new MediumEditor(iElement, opts);
-            jQuery(iElement).mediumInsert(scope.$eval({editor: this.editor, enabled: true}));
+
+            var mediumInsertOptions = {
+              editor: null,
+              enabled: true,
+              addons: {
+                images: {
+                  preview: false
+                },
+                embeds: true
+              }
+            };
+
+            if(iAttrs.imageUploadAction) {
+              mediumInsertOptions.addons.images.customUploadAction = scope.imageUploadAction;
+            }
+
+            jQuery(iElement).mediumInsert(mediumInsertOptions);
           }
 
           iElement.html(ctrl.$isEmpty(ctrl.$viewValue) ? '' : ctrl.$viewValue);

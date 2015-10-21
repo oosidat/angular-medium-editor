@@ -4,7 +4,7 @@
   "dependencies": {
     "angular": "1.3.*",
     "medium-editor": "5.8.*",
-    "medium-editor-insert-plugin": "https://github.com/oosidat/medium-editor-insert-plugin.git#v2.0.2"
+    "medium-editor-insert-plugin": "https://github.com/oosidat/medium-editor-insert-plugin.git#v2.0.3"
   },
   "main": "./dist/angular-medium-editor.js"
 }
