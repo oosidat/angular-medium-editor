@@ -2,7 +2,7 @@
 
 angular.module('angular-medium-editor', [])
 
-  .directive('mediumEditor', function() {
+  .directive('mediumEditor', function($timeout) {
 
     return {
       require: 'ngModel',
@@ -46,7 +46,7 @@ angular.module('angular-medium-editor', [])
 
         var onChange = function() {
 
-          scope.$apply(function() {
+          $timeout(function() {
 
             // If user cleared the whole text, we have to reset the editor because MediumEditor
             // lacks an API method to alter placeholder after initialization

@@ -1,6 +1,6 @@
 /**
  * angular-medium-editor
- * @version v0.1.0 - 2015-10-21
+ * @version v0.1.0 - 2015-10-23
  * @link https://github.com/thijsw/angular-medium-editor
  * @author Thijs Wijnmaalen <thijs@wijnmaalen.name>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -9,7 +9,7 @@
 
 angular.module('angular-medium-editor', [])
 
-  .directive('mediumEditor', function() {
+  .directive('mediumEditor', function($timeout) {
 
     return {
       require: 'ngModel',
@@ -53,7 +53,7 @@ angular.module('angular-medium-editor', [])
 
         var onChange = function() {
 
-          scope.$apply(function() {
+          $timeout(function() {
 
             // If user cleared the whole text, we have to reset the editor because MediumEditor
             // lacks an API method to alter placeholder after initialization
